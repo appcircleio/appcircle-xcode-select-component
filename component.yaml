@@ -17,6 +17,7 @@ inputs:
   helpText:
 outputs:
 - key: "XCODE_DEVELOPER_DIR_PATH"
+  title: Xcode Developer Dir Path
   defaultValue: "XCODE_DEVELOPER_DIR_PATH"
   description: Xcode developer directory path.
   helpText:
