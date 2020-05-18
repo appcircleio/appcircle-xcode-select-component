@@ -16,6 +16,10 @@ inputs:
   description: Specifies the xcode version.
   helpText:
 outputs:
+- key: "XCODE_DEVELOPER_DIR_PATH"
+  defaultValue: "XCODE_DEVELOPER_DIR_PATH"
+  description: Xcode developer directory path.
+  helpText:
 processFilename: ruby
 processArguments: '%AC_STEP_TEMP%/main.rb'
 files:
