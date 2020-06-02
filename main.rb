@@ -31,6 +31,10 @@ end
 
 run_command("sudo xcode-select --switch \"#{xcode_developer_dir_path}\"")
 
+puts "\n"
+run_command("xcodebuild -version")
+puts "\n"
+
 ### Write Environment Variable
 open(ENV['AC_ENV_FILE_PATH'], 'a') { |f|
   f.puts "XCODE_DEVELOPER_DIR_PATH=#{xcode_developer_dir_path}"
