@@ -1,7 +1,7 @@
 platform: iOS
 buildPlatform:
 displayName: "Xcode Select"
-description: "Use to specify xcode version."
+description: "Select a specific Xcode version for the build."
 inputs:
 - key: "AC_XCODE_LIST_DIR"
   defaultValue: "$AC_XCODE_LIST_DIR"
