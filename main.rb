@@ -10,7 +10,7 @@ xcode_version = env_has_key("AC_XCODE_VERSION")
 xcode_developer_dir_path = "#{xcode_list_dir}/#{xcode_version}/Xcode.app/Contents/Developer"
 
 def run_command(command)
-    puts "@[command] #{command}"
+    puts "@@[command] #{command}"
     status = nil
     stdout_str = nil
     stderr_str = nil
