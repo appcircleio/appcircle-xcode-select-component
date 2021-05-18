@@ -2,12 +2,17 @@ require 'open3'
 
 ###### Enviroment Variable Check
 def env_has_key(key)
-  return (ENV[key] != nil && ENV[key] !="") ? ENV[key] : abort("Missing #{key}.")
+	return (ENV[key] == nil || ENV[key] == "") ? nil : ENV[key]
 end
 
 xcode_list_dir = env_has_key("AC_XCODE_LIST_DIR")
-xcode_version = env_has_key("AC_XCODE_VERSION")
+xcode_version = env_has_key("AC_XCODE_VERSION") || abort('Missing AC_XCODE_VERSION.')
 xcode_developer_dir_path = "#{xcode_list_dir}/#{xcode_version}/Xcode.app/Contents/Developer"
+
+if xcode_list_dir.nil?
+    path_version = xcode_version.split(".")[0...-1].join(".")
+    xcode_developer_dir_path = "/Volumes/xcode.#{path_version}/Xcode.app/Contents/Developer"
+end
 
 def run_command(command)
     puts "@@[command] #{command}"
@@ -41,6 +46,3 @@ open(ENV['AC_ENV_FILE_PATH'], 'a') { |f|
 }
 
 exit 0
-
-
-
