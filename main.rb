@@ -9,7 +9,7 @@ xcode_list_dir = env_has_key("AC_XCODE_LIST_DIR")
 xcode_version = env_has_key("AC_XCODE_VERSION") || abort('Missing AC_XCODE_VERSION.')
 xcode_developer_dir_path = "#{xcode_list_dir}/#{xcode_version}/Xcode.app/Contents/Developer"
 
-if !Dir.exist?('/Applications/Xcode')
+if !Dir.exist?('/Applications/Xcode/')
     path_version = xcode_version.split(".")[0...-1].join(".")
     xcode_developer_dir_path = "/Volumes/Xcode.#{path_version}/Xcode.app/Contents/Developer"
 end
