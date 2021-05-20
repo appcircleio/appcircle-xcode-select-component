@@ -11,7 +11,7 @@ xcode_developer_dir_path = "#{xcode_list_dir}/#{xcode_version}/Xcode.app/Content
 
 if !Dir.exist?('/Applications/Xcode/')
     path_version = xcode_version.split(".")[0...-1].join(".")
-    xcode_developer_dir_path = "/Volumes/Xcode.#{path_version}/Xcode.app/Contents/Developer"
+    xcode_developer_dir_path = "/Volumes/xcode.#{path_version}/Xcode.app/Contents/Developer"
 end
 
 def run_command(command)
