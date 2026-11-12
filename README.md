@@ -8,3 +8,13 @@ Required Input Variables
 
 Output Variables
 - `$XCODE_DEVELOPER_DIR_PATH`: Xcode developer directory path.
+
+## Running tests
+
+Requires [RSpec](https://rspec.info) gem and Ruby standard library (Coverage). No Gemfile or Bundler needed.
+
+```bash
+ruby test/test_main.rb
+```
+
+A coverage report is printed at the end of each run.
